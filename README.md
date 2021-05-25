@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/n80mk0hyrr6q7j61?svg=true)](https://ci.appveyor.com/project/Olegun56/hw-2-1-aqa-webinterface-testing)
