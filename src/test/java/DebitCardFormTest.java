@@ -46,7 +46,7 @@ public class DebitCardFormTest {
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button__content")).click();
         String text = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее врем.", text.trim());
 
     }
 
@@ -54,7 +54,7 @@ public class DebitCardFormTest {
     void testWithCssSelectors() {
         driver.get("http://localhost:9999/");
         WebElement form = driver.findElement(By.cssSelector("form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Олег");
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Oleg");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79123456789");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector("[type=button]")).click();
@@ -71,7 +71,7 @@ public class DebitCardFormTest {
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector("[type=button]")).click();
         String text = driver.findElement(By.cssSelector(".input__sub")).getText();
-        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", text.trim());
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефис.", text.trim());
 
     }
 
@@ -84,7 +84,7 @@ public class DebitCardFormTest {
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector("[type=button]")).click();
         String text = driver.findElement(By.cssSelector("[data-test-id=phone] .input__sub")).getText();
-        assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", text.trim());
+        assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +7901234567.", text.trim());
 
     }
 
@@ -96,7 +96,7 @@ public class DebitCardFormTest {
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79123456789");
         form.findElement(By.cssSelector("[type=button]")).click();
         String text = driver.findElement(By.cssSelector("[data-test-id=agreement] .checkbox__text")).getText();
-        assertEquals("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй", text.trim());
+        assertEquals("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных истори", text.trim());
 
     }
 
