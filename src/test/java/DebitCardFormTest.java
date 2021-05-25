@@ -13,7 +13,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DebitCardFormTest {
-    private WebDriver driver;
+    public WebDriver driver;
 
 
     @BeforeAll
@@ -23,11 +23,11 @@ public class DebitCardFormTest {
 
     @BeforeEach
     void setUp() {
-        //  ChromeOptions options = new ChromeOptions();
-        //   options.addArguments("--disable-dev-shm-usage");
-        //   options.addArguments("--no-sandbox");
-        // options.addArguments("--headless");
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
     }
 
     @AfterEach
