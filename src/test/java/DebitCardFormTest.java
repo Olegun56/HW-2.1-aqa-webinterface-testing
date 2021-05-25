@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,11 +14,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DebitCardFormTest {
-    public WebDriver driver;
+    private WebDriver driver;
 
 
     @BeforeAll
     static void setUpAll() {
+        WebDriverManager.chromedriver().setup();
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("windows")) {
             System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
